@@ -1,22 +1,19 @@
-import type { Metadata } from "next"
+import Header from "@/components/Header"
+import Footer from "@/components/Footer"
 import "@/styles/globals.css"
-import "@fontsource/inter/variable.css"
-import "@fontsource/playfair-display/variable.css"
 
-export const metadata: Metadata = {
-  title: "Rogate — Handmade Brand",
-  description: "Professional handmade fashion and jewelry by Rogate.",
+export const metadata = {
+  title: "Rogate",
+  description: "Rogate Official Brand Website",
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="bg-cream text-primary font-body">
-      <body>
-        <div className="min-h-screen flex flex-col">
-          {/* TODO: Add <Header /> later */}
-          <main className="flex-grow">{children}</main>
-          {/* TODO: Add <Footer /> later */}
-        </div>
+    <html lang="en">
+      <body className="bg-background text-primary font-sans antialiased">
+        <Header />
+        <main className="min-h-screen">{children}</main>
+        <Footer />
       </body>
     </html>
   )

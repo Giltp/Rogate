@@ -1,23 +1,23 @@
-// tailwind.config.ts
-import { type Config } from "tailwindcss"
+  // tailwind.config.ts
+  import { type Config } from "tailwindcss"
 
-const config: Config = {
-  content: [
-    "./app/**/*.{ts,tsx}",
-    "./components/**/*.{ts,tsx}"
-  ],
-  theme: {
-    extend: {
-      colors: {
-        cream: "#f7f5ed",
-        primary: "#111111",
-      },
-      fontFamily: {
-        heading: ['"Playfair Display"', 'serif'],
-        body: ['"Inter"', 'sans-serif'],
+  const config: Config = {
+    content: [
+      "./src/app/**/*.{js,ts,jsx,tsx}",
+      "./src/components/**/*.{js,ts,jsx,tsx}"
+    ],
+    theme: {
+      extend: {
+        colors: {
+          background: "#fdfcf8", // Soft ivory background
+          primary: "#111111",    // Deep dark text
+        },
+        fontFamily: {
+          sans: ['"Inter"', 'sans-serif'],
+          serif: ['"Playfair Display"', 'serif'],
+        },
       },
     },
-  },
-  plugins: [],
-}
-export default config
+    plugins: [],
+  }
+  export default config
